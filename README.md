@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/shubhamsaboo/">
+  <a href="https://www.linkedin.com/in/ishandutta2007/">
     <img src="https://img.shields.io/badge/Follow%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
   <a href="https://twitter.com/Saboo_Shubham_">
@@ -15,14 +15,14 @@
 
 <p align="center">
   <!-- Keep these links. Translations will automatically update with the README. -->
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=de">Deutsch</a> | 
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=es">Español</a> | 
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=fr">français</a> | 
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ja">日本語</a> | 
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ko">한국어</a> | 
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=pt">Português</a> | 
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=ru">Русский</a> | 
-  <a href="https://www.readme-i18n.com/Shubhamsaboo/awesome-llm-apps?lang=zh">中文</a>
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=de">Deutsch</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=es">Español</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=fr">français</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=ja">日本語</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=ko">한국어</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=pt">Português</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=ru">Русский</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=zh">中文</a>
 </p>
 
 <hr/>
@@ -40,11 +40,11 @@ AI Agents · Multi-agent Teams · MCP Agents · RAG · Voice Agents · Agent Ski
 </p>
 
 <p>
-<a href="https://github.com/Shubhamsaboo/awesome-llm-apps/stargazers"><img src="https://img.shields.io/github/stars/Shubhamsaboo/awesome-llm-apps?style=for-the-badge&logo=github&color=FFD700" alt="Stars"></a>
-<a href="https://github.com/Shubhamsaboo/awesome-llm-apps/network/members"><img src="https://img.shields.io/github/forks/Shubhamsaboo/awesome-llm-apps?style=for-the-badge&logo=github&color=4FC3F7" alt="Forks"></a>
-<a href="https://github.com/Shubhamsaboo/awesome-llm-apps/graphs/contributors"><img src="https://img.shields.io/github/contributors/Shubhamsaboo/awesome-llm-apps?style=for-the-badge&color=22C55E" alt="Contributors"></a>
-<a href="LICENSE"><img src="https://img.shields.io/github/license/Shubhamsaboo/awesome-llm-apps?style=for-the-badge&color=8B5CF6" alt="License"></a>
-<img src="https://img.shields.io/github/last-commit/Shubhamsaboo/awesome-llm-apps?style=for-the-badge&color=F97316" alt="Last Commit">
+<a href="https://github.com/ishandutta2007/Awesome-LLM-Agents/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&logo=github&color=FFD700" alt="Stars"></a>
+<a href="https://github.com/ishandutta2007/Awesome-LLM-Agents/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&logo=github&color=4FC3F7" alt="Forks"></a>
+<a href="https://github.com/ishandutta2007/Awesome-LLM-Agents/graphs/contributors"><img src="https://img.shields.io/github/contributors/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&color=22C55E" alt="Contributors"></a>
+<a href="LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&color=8B5CF6" alt="License"></a>
+<img src="https://img.shields.io/github/last-commit/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&color=F97316" alt="Last Commit">
 </p>
 
 <p>
@@ -74,15 +74,15 @@ You shouldn't have to rebuild the same RAG pipeline, agent loop, or MCP integrat
 - 📚 **Step-by-step tutorials** - every featured template has a free walkthrough on [Unwind AI](https://www.theunwindai.com).
 - 💸 **Apache-2.0** - fork it, ship it, sell it. No paywall, no signup, no telemetry.
 
-> ⭐ **If this saves you time, [star the repo](https://github.com/Shubhamsaboo/awesome-llm-apps/stargazers) - that's how the next developer discovers it.**
+> ⭐ **If this saves you time, [star the repo](https://github.com/ishandutta2007/Awesome-LLM-Agents/stargazers) - that's how the next developer discovers it.**
 
 ## 🚀 Quick Start
 
 Run your first agent in **30 seconds**:
 
 ```bash
-git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
-cd awesome-llm-apps/starter_ai_agents/ai_travel_agent
+git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+cd Awesome-LLM-Agents/starter_ai_agents/ai_travel_agent
 pip install -r requirements.txt
 streamlit run travel_agent.py
 ```
@@ -316,15 +316,15 @@ streamlit run travel_agent.py
 
 <p>Created and maintained by <a href="https://twitter.com/Saboo_Shubham_"><strong>Shubham Saboo</strong></a> with contributions from the amazing community members.</p>
 
-<a href="https://github.com/Shubhamsaboo/awesome-llm-apps/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Shubhamsaboo/awesome-llm-apps&max=40&columns=10&anon=0" alt="Top contributors" />
+<a href="https://github.com/ishandutta2007/Awesome-LLM-Agents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ishandutta2007/Awesome-LLM-Agents&max=40&columns=10&anon=0" alt="Top contributors" />
 </a>
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Shubhamsaboo/awesome-llm-apps&type=Date)](https://star-history.com/#Shubhamsaboo/awesome-llm-apps&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Awesome-LLM-Agents&type=Date)](https://star-history.com/#ishandutta2007/Awesome-LLM-Agents&Date)
 
-> 🌟 **Don't miss future drops - [star the repo](https://github.com/Shubhamsaboo/awesome-llm-apps) to get notified when new templates ship.**
+> 🌟 **Don't miss future drops - [star the repo](https://github.com/ishandutta2007/Awesome-LLM-Agents) to get notified when new templates ship.**
 
 ## 📜 License
 
