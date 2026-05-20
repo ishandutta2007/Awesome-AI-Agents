@@ -21,7 +21,7 @@ You will need API keys for each external service:
 1. Clone the GitHub repository
 
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 ```
 2. Create and activate a virtual environment (optional but recommended).
 

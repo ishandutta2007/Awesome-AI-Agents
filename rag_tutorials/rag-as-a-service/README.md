@@ -13,7 +13,7 @@ Build and deploy a production-ready Retrieval-Augmented Generation (RAG) service
 
 1. Clone the GitHub repository
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd awesome-llm-apps/rag_tutorials/rag-as-a-service
 ```
 

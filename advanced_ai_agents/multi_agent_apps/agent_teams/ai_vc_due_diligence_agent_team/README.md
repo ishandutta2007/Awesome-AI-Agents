@@ -29,7 +29,7 @@ Given a startup name or URL, the pipeline automatically:
 
 ### 1. Clone & Navigate
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd awesome-llm-apps/advanced_ai_agents/multi_agent_apps/agent_teams/ai_vc_due_diligence_agent_team
 ```
 

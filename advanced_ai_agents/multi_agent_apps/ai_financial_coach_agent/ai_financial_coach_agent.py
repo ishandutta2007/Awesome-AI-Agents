@@ -960,8 +960,8 @@ def main():
         ### Need Help?
         
         For support or questions:
-        - Check the [documentation](https://github.com/ishandutta2007/Awesome-LLM-Agents)
-        - Report issues on [GitHub](https://github.com/ishandutta2007/Awesome-LLM-Agents/issues)
+        - Check the [documentation](https://github.com/ishandutta2007/Awesome-AI-Agents)
+        - Report issues on [GitHub](https://github.com/ishandutta2007/Awesome-AI-Agents/issues)
         """)
 
 if __name__ == "__main__":

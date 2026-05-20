@@ -15,7 +15,7 @@ This script demonstrates how to build a team of AI agents that work together as 
 
 1. Clone the GitHub repository
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd advanced_ai_agents/multi_agent_apps/agent_teams/ai_finance_agent_team
 ```
 

@@ -17,7 +17,7 @@ A Medical Imaging Diagnosis Agent build on agno powered by Gemini 2.0 Flash that
 1. **Setup Environment**
    ```bash
    # Clone the repository
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd ai_agent_tutorials/ai_medical_imaging_agent
 
    # Install dependencies

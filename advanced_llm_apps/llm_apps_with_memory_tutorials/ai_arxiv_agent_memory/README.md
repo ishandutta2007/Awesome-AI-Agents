@@ -17,7 +17,7 @@ This Streamlit app implements an AI-powered research assistant that helps users 
 
 1. Clone the GitHub repository
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd awesome-llm-apps/llm_apps_with_memory_tutorials/ai_arxiv_agent_memory
 ```
 

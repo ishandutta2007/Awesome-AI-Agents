@@ -38,7 +38,7 @@ API keys required:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd ai_agent_tutorials/ai_meme_generator_browseruse
    ```
 2. **Install the dependencies**:

@@ -27,7 +27,7 @@ A Streamlit app that integrates Contextual AI's managed RAG platform. Create a d
 
 1. Clone the repository and navigate to the app folder:
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd awesome-llm-apps/rag_tutorials/contextualai_rag_agent
 ```
 

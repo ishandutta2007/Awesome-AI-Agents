@@ -37,7 +37,7 @@ You'll need the following API keys and database setup:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd awesome-llm-apps/rag_tutorials/hybrid_search_rag
    ```
 

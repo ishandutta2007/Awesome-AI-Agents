@@ -40,7 +40,7 @@ Follow these steps to set up and run the application:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd ai_agent_tutorials/ai_aqi_analysis_agent
    ```
 

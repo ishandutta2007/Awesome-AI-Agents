@@ -27,7 +27,7 @@ This application leverages multiple specialized AI agents to provide comprehensi
 1. **Setup Environment**
    ```bash
    # Clone the repository
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_design_agent_team
 
    # Create and activate virtual environment (optional)

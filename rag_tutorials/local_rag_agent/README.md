@@ -18,7 +18,7 @@ This application implements a Retrieval-Augmented Generation (RAG) system using 
 
 1. Clone the GitHub repository
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 ```
 
 2. Install the required dependencies:

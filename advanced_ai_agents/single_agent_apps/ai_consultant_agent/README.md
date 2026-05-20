@@ -35,7 +35,7 @@ A powerful business consultant powered by Google's Agent Development Kit that pr
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd advanced_ai_agents/single_agent_apps
    ```
 

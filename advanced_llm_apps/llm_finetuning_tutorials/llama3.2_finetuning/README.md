@@ -17,7 +17,7 @@ This script demonstrates how to finetune the Llama 3.2 model using the [Unsloth]
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd awesome-llm-apps/llm_finetuning_tutorials/llama3.2_finetuning
 ```
 

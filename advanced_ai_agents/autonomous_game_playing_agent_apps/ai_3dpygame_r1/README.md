@@ -18,7 +18,7 @@ This Project demonstrates R1's code capabilities with a PyGame code generator an
 
 1. Clone the GitHub repository
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd awesome-llm-apps/ai_agent_tutorials/ai_3dpygame_r1
 ```
 

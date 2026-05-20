@@ -27,7 +27,7 @@ A Streamlit application that allows you to browse and interact with websites usi
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd mcp_ai_agents/browser_mcp_agent
    ```
 
@@ -58,7 +58,7 @@ A Streamlit application that allows you to browse and interact with websites usi
 
 ### Running with a local Ollama model
 
-Because `mcp-agent` talks to an OpenAI-compatible endpoint and Ollama exposes one at `http://localhost:11434/v1`, this agent runs against a local model with just config changes — no code edits or extra dependencies. See discussion in [#329](https://github.com/ishandutta2007/Awesome-LLM-Agents/issues/329).
+Because `mcp-agent` talks to an OpenAI-compatible endpoint and Ollama exposes one at `http://localhost:11434/v1`, this agent runs against a local model with just config changes — no code edits or extra dependencies. See discussion in [#329](https://github.com/ishandutta2007/Awesome-AI-Agents/issues/329).
 
 1. Install and start Ollama, then pull a tool-capable model:
    ```bash

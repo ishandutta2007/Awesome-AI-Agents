@@ -204,7 +204,7 @@ if run_button:
 
 else:
     # Landing state
-    st.image("https://raw.githubusercontent.com/ishandutta2007/Awesome-LLM-Agents/main/advanced_ai_agents/multi_agent_apps/devpulse_ai/assets/logo.png", width=200) # Placeholder for logo logic
+    st.image("https://raw.githubusercontent.com/ishandutta2007/Awesome-AI-Agents/main/advanced_ai_agents/multi_agent_apps/devpulse_ai/assets/logo.png", width=200) # Placeholder for logo logic
     st.info("👈 Use the sidebar to configure the pipeline and click 'Run' to begin.")
     
     # Educational Section

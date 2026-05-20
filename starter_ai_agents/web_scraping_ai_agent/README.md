@@ -68,7 +68,7 @@ python quickstart.py
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd awesome-llm-apps/starter_ai_agents/web_scrapping_ai_agent
 ```
 

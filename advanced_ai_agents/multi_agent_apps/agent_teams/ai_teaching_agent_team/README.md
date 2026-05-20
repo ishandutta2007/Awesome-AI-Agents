@@ -37,7 +37,7 @@ A Streamlit application that brings together a team of specialized AI teaching a
 1. Clone the repository
   ```bash
    # Clone the repository
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd ai_agent_tutorials/ai_personal_learning_agent
 
    # Install dependencies

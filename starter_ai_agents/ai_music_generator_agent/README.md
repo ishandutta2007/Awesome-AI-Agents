@@ -22,7 +22,7 @@ This is a Streamlit-based application that allows users to generate music using 
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents
    cd starter_ai_agents/ai_models_lab_music_generator_agent
    ```
 

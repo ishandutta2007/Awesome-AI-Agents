@@ -41,7 +41,7 @@ Learn how to build a governance layer that enforces deterministic policies on AI
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
    cd advanced_ai_agents/single_agent_apps/ai_agent_governance
    ```
 

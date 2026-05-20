@@ -27,7 +27,7 @@ This is a Streamlit-based application that allows users to convert any blog post
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/ishandutta2007/Awesome-LLM-Agents
+   git clone https://github.com/ishandutta2007/Awesome-AI-Agents
    cd ai_agent_tutorials/ai_blog_to_podcast_agent
    ```
 

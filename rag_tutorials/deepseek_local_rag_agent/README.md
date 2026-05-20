@@ -71,7 +71,7 @@ ollama pull llama3.2
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 cd rag_tutorials/deepseek_local_rag_agent
 ```
 
