@@ -8,7 +8,7 @@
   <a href="https://www.linkedin.com/in/ishandutta2007/">
     <img src="https://img.shields.io/badge/Follow%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://twitter.com/Saboo_Shubham_">
+  <a href="https://x.com/ishandutta2007">
     <img src="https://img.shields.io/badge/Follow%20on%20𝕏-000000?style=for-the-badge&logo=x&logoColor=white" alt="X / Twitter">
   </a>
 </p>
@@ -314,7 +314,7 @@ streamlit run travel_agent.py
 
 ## 🙏 Built by
 
-<p>Created and maintained by <a href="https://twitter.com/Saboo_Shubham_"><strong>Shubham Saboo</strong></a> with contributions from the amazing community members.</p>
+<p>Created and maintained by <a href="https://x.com/ishandutta2007"><strong>Ishan Dutta</strong></a> with contributions from the amazing community members.</p>
 
 <a href="https://github.com/ishandutta2007/Awesome-LLM-Agents/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ishandutta2007/Awesome-LLM-Agents&max=40&columns=10&anon=0" alt="Top contributors" />
@@ -329,3 +329,10 @@ streamlit run travel_agent.py
 ## 📜 License
 
 Apache-2.0. See [LICENSE](LICENSE). Fork it, ship it, sell it.
+
+## Credits
+
+- https://github.com/kaushikb11/awesome-llm-agents
+- https://github.com/kyrolabs/awesome-agents
+- https://github.com/Jenqyang/Awesome-AI-Agents
+- https://github.com/kaushikb11/awesome-llm-agents
