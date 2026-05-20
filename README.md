@@ -15,14 +15,14 @@
 
 <p align="center">
   <!-- Translations -->
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=de">Deutsch</a> | 
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=es">Español</a> | 
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=fr">Français</a> | 
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=ja">日本語</a> | 
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=ko">한국어</a> | 
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=pt">Português</a> | 
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=ru">Русский</a> | 
-  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-LLM-Agents?lang=zh">中文</a>
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=de">Deutsch</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=es">Español</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=fr">Français</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=ja">日本語</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=ko">한국어</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=pt">Português</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=ru">Русский</a> | 
+  <a href="https://www.readme-i18n.com/ishandutta2007/Awesome-AI-Agents?lang=zh">中文</a>
 </p>
 
 <hr/>
@@ -35,11 +35,11 @@
 <p><strong>100+ Production-Ready Templates — Clone, Customize, and Deploy in Minutes.</strong><br/>
 <em>Mastering the modern AI stack: AI Agents • Multi-Agent Teams • MCP • RAG • Voice AI • Fine-tuning</em></p>
 
-[![Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&logo=github&color=FFD700)](https://github.com/ishandutta2007/Awesome-LLM-Agents/stargazers)
-[![Forks](https://img.shields.io/github/forks/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&logo=github&color=4FC3F7)](https://github.com/ishandutta2007/Awesome-LLM-Agents/network/members)
-[![Contributors](https://img.shields.io/github/contributors/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&color=22C55E)](https://github.com/ishandutta2007/Awesome-LLM-Agents/graphs/contributors)
-[![License](https://img.shields.io/github/license/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&color=8B5CF6)](LICENSE)
-![Last Commit](https://img.shields.io/github/last-commit/ishandutta2007/Awesome-LLM-Agents?style=for-the-badge&color=F97316)
+[![Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-AI-Agents?style=for-the-badge&logo=github&color=FFD700)](https://github.com/ishandutta2007/Awesome-AI-Agents/stargazers)
+[![Forks](https://img.shields.io/github/forks/ishandutta2007/Awesome-AI-Agents?style=for-the-badge&logo=github&color=4FC3F7)](https://github.com/ishandutta2007/Awesome-AI-Agents/network/members)
+[![Contributors](https://img.shields.io/github/contributors/ishandutta2007/Awesome-AI-Agents?style=for-the-badge&color=22C55E)](https://github.com/ishandutta2007/Awesome-AI-Agents/graphs/contributors)
+[![License](https://img.shields.io/github/license/ishandutta2007/Awesome-AI-Agents?style=for-the-badge&color=8B5CF6)](LICENSE)
+![Last Commit](https://img.shields.io/github/last-commit/ishandutta2007/Awesome-AI-Agents?style=for-the-badge&color=F97316)
 
 <p>
 <a href="#-quick-start"><kbd> &nbsp; 🚀 Get Started &nbsp; </kbd></a>
@@ -67,7 +67,7 @@ Building modern AI applications shouldn't require reinventing the wheel. **Aweso
 - 🎓 **Guided Learning**: Detailed walkthroughs for every featured project on [Unwind AI](https://www.theunwindai.com).
 - 🔓 **Fully Open Source**: Apache-2.0 license. Build, fork, and monetize without restrictions.
 
-> 🚀 **Found this useful? [Give it a star](https://github.com/ishandutta2007/Awesome-LLM-Agents/stargazers) to help others find it!**
+> 🚀 **Found this useful? [Give it a star](https://github.com/ishandutta2007/Awesome-AI-Agents/stargazers) to help others find it!**
 
 ---
 
@@ -77,10 +77,10 @@ Get your first autonomous agent running in less than a minute:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
+git clone https://github.com/ishandutta2007/Awesome-AI-Agents.git
 
 # Navigate to a featured agent
-cd Awesome-LLM-Agents/starter_ai_agents/ai_travel_agent
+cd Awesome-AI-Agents/starter_ai_agents/ai_travel_agent
 
 # Install dependencies and launch
 pip install -r requirements.txt
@@ -246,13 +246,13 @@ streamlit run travel_agent.py
 
 <p>Created and maintained by <a href="https://x.com/ishandutta2007"><strong>Ishan Dutta</strong></a>. Built with ❤️ by the AI community.</p>
 
-<a href="https://github.com/ishandutta2007/Awesome-LLM-Agents/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ishandutta2007/Awesome-LLM-Agents&max=40&columns=10&anon=0" alt="Top contributors" />
+<a href="https://github.com/ishandutta2007/Awesome-AI-Agents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ishandutta2007/Awesome-AI-Agents&max=40&columns=10&anon=0" alt="Top contributors" />
 </a>
 
 ## ⭐ Project Growth
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Awesome-LLM-Agents&type=Date)](https://star-history.com/#ishandutta2007/Awesome-LLM-Agents&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Awesome-AI-Agents&type=Date)](https://star-history.com/#ishandutta2007/Awesome-AI-Agents&Date)
 
 ---
 
@@ -261,6 +261,6 @@ streamlit run travel_agent.py
 Released under the [Apache-2.0 License](LICENSE). 
 
 **Inspiration and related collections:**
-- [Kaushikb11/Awesome-LLM-Agents](https://github.com/kaushikb11/awesome-llm-agents)
+- [Kaushikb11/Awesome-AI-Agents](https://github.com/kaushikb11/awesome-llm-agents)
 - [Kyrolabs/Awesome-Agents](https://github.com/kyrolabs/awesome-agents)
 - [Jenqyang/Awesome-AI-Agents](https://github.com/Jenqyang/Awesome-AI-Agents)
