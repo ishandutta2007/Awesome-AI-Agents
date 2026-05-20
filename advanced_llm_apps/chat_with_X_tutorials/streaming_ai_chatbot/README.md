@@ -29,7 +29,7 @@ streaming-ai-chatbot/
 
 ```bash
 # Clone the repository
-git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
+git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
 cd advanced_llm_apps/chat_with_X_tutorials/chat_with_llms
 
 # Install dependencies

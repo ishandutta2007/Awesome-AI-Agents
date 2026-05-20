@@ -26,7 +26,7 @@ MOCK_SIGNALS = [
         "source": "github",
         "title": "awesome-llm-apps",
         "description": "A curated collection of awesome LLM apps built with RAG and AI agents.",
-        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/ishandutta2007/Awesome-LLM-Agents",
         "metadata": {"stars": 5000, "language": "Python", "topics": ["llm", "ai"]},
     },
     {

@@ -192,4 +192,4 @@ No `google-generativeai` required. Gemini is an optional extension if users want
 
 ---
 
-_Built as a reference implementation for [awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)._
+_Built as a reference implementation for [awesome-llm-apps](https://github.com/ishandutta2007/Awesome-LLM-Agents)._

@@ -43,7 +43,7 @@ This agent lives in `advanced_ai_agents/single_agent_apps/earnings_call_analyst_
 1. Clone the GitHub repository
 
 ```bash
-git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
+git clone https://github.com/ishandutta2007/Awesome-LLM-Agents.git
 cd advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent
 ```
 
