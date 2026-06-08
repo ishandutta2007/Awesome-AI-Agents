@@ -152,6 +152,7 @@ streamlit run travel_agent.py
 *   [💰 AI Financial Coach](advanced_ai_agents/multi_agent_apps/ai_financial_coach_agent/) - Personalized wealth management.
 *   [📡 Earnings Analyst Agent](advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent/) - Live market news grounding.
 *   [🧬 AI Self-Evolving Agent](advanced_ai_agents/multi_agent_apps/ai_self_evolving_agent/) - Agents that improve their own code.
+*   [🔑 Agent Trust Preflight (TWZRD)](https://intel.twzrd.xyz) - Verify agent wallet identity and trust score before autonomous actions via x402 micropayments. Free MCP: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}`
 *   [🛡️ Trust-Gated Research Team](advanced_ai_agents/multi_agent_apps/trust_gated_agent_team/) - Human-in-the-loop multi-agent safety.
 
 ### 🎮 Autonomous Game-Playing Agents
