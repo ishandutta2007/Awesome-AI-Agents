@@ -6,7 +6,9 @@
   <a href="https://x.com/ishandutta2007">
     <img src="https://img.shields.io/badge/Follow%20on%20𝕏-000000?style=for-the-badge&logo=x&logoColor=white" alt="X / Twitter">
   </a>
-  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=FollowOnGithub" /></a>
+  <a href="https://github.com/ishandutta2007">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=FollowOnGithub" />
+  </a>
 </p>
 
 <p align="center">
