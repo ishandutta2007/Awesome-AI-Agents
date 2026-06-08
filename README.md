@@ -180,7 +180,7 @@ streamlit run travel_agent.py
 *   [♾️ Browser MCP Agent](mcp_ai_agents/browser_mcp_agent/) - Web automation via MCP.
 *   [🐙 GitHub MCP Agent](mcp_ai_agents/github_mcp_agent/) - Repo management and PR automation.
 *   [📑 Notion MCP Agent](mcp_ai_agents/notion_mcp_agent) - Knowledge base management.
-*   [🔀 Multi-MCP Agent Router](mcp_ai_agents/multi_mcp_agent_router/) - Orchestrate multiple MCP servers.
+*   [🔀 Multi-MCP Agent Router](mcp_ai_agents/multi_mcp_ai_agent_router/) - Orchestrate multiple MCP servers.
 
 ### 📀 RAG (Retrieval-Augmented Generation)
 *Advanced retrieval techniques for grounding LLMs in private data.*
@@ -259,6 +259,7 @@ Released under the [MIT License](LICENSE).
 **Inspiration and related collections:**
 - [Kaushikb11/Awesome-AI-Agents](https://github.com/kaushikb11/awesome-llm-agents)
 - [Kyrolabs/Awesome-Agents](https://github.com/kyrolabs/awesome-agents)
+- [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps)
 - [Jenqyang/Awesome-AI-Agents](https://github.com/Jenqyang/Awesome-AI-Agents)
 I-Agents](https://github.com/Jenqyang/Awesome-AI-Agents)
 esome-AI-Agents)
