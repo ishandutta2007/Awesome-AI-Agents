@@ -1,8 +1,3 @@
-<p align="center">
-  <a href="http://www.theunwindai.com">
-    <img src="docs/banner/unwind_black.png" width="900px" alt="Unwind AI - The Ultimate AI Agent & RAG Cookbook">
-  </a>
-</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/ishandutta2007/">
@@ -11,6 +6,7 @@
   <a href="https://x.com/ishandutta2007">
     <img src="https://img.shields.io/badge/Follow%20on%20𝕏-000000?style=for-the-badge&logo=x&logoColor=white" alt="X / Twitter">
   </a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=FollowOnGithub" /></a>
 </p>
 
 <p align="center">
@@ -65,7 +61,7 @@ Building modern AI applications shouldn't require reinventing the wheel. **Aweso
 - 🏗️ **Modern AI Stack**: Native support for **Claude 3.5**, **Gemini 1.5 Pro**, **GPT-4o**, **Llama 3.2**, and **Qwen 2.5**.
 - 🔌 **Plug-and-Play MCP**: Seamlessly integrate **Model Context Protocol** for external tool access.
 - 🎓 **Guided Learning**: Detailed walkthroughs for every featured project on [Unwind AI](https://www.theunwindai.com).
-- 🔓 **Fully Open Source**: Apache-2.0 license. Build, fork, and monetize without restrictions.
+- 🔓 **Fully Open Source**: MIT license. Build, fork, and monetize without restrictions.
 
 > 🚀 **Found this useful? [Give it a star](https://github.com/ishandutta2007/Awesome-AI-Agents/stargazers) to help others find it!**
 
@@ -93,7 +89,7 @@ streamlit run travel_agent.py
 
 | Project Template | Capability | Core Tech Stack |
 |:---|:---|:---|
-| [📡 Earnings Analyst](advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent/) | YouTube-to-Insight cards with quote syncing | Gemini 1.5 + ADK |
+| [📡 Earnings Analyst](advanced_ai_agents/single_ai_agents/earnings_call_analyst_agent/) | YouTube-to-Insight cards with quote syncing | Gemini 1.5 + ADK |
 | [🛡️ Live Voice Claims](voice_ai_agents/insurance_claim_live_agent_team/) | Real-time voice intake for insurance | Gemini Live + Voice |
 | [🏠 Home AI Redesign](advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent) | Image-to-Architecture transformation | Vision + Multi-Agent |
 | [♾️ Skill Optimizer](awesome_agent_skills/self-improving-agent-skills/) | Self-evolving agent capabilities | ADK + Gemini |
@@ -138,7 +134,7 @@ streamlit run travel_agent.py
 *   [✨ Gemini Multimodal Agent](starter_ai_agents/gemini_multimodal_agent_demo/) - Native multimodal interaction.
 *   [🔄 Mixture of Agents](starter_ai_agents/mixture_of_agents/) - High-performance MoE implementation.
 *   [📊 xAI Finance Agent](starter_ai_agents/xai_finance_agent/) - Financial insights powered by Grok.
-*   [🔍 OpenAI Research Agent](starter_ai_agents/openai_research_agent/) - Deep web search and synthesis.
+*   [🔍 OpenAI Research Agent](starter_ai_agents/openai_research_ai_agent/) - Deep web search and synthesis.
 *   [🕸️ Web Scraping AI Agent](starter_ai_agents/web_scraping_ai_agent/) - Intelligent data extraction.
 
 ### 🚀 Advanced AI Agents
@@ -146,11 +142,11 @@ streamlit run travel_agent.py
 
 *   [🏚️ AI Home Renovation Agent](advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent) - Visual redesign with Nano Banana Pro.
 *   [🧠 DevPulse AI](advanced_ai_agents/multi_agent_apps/devpulse_ai/) - Multi-agent signal intelligence for developers.
-*   [🔍 AI Deep Research Agent](advanced_ai_agents/single_agent_apps/ai_deep_research_agent/) - Systematic deep-dive researcher.
+*   [🔍 AI Deep Research Agent](advanced_ai_agents/single_ai_agents/ai_deep_research_agent/) - Systematic deep-dive researcher.
 *   [📊 AI VC Due Diligence Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_vc_due_diligence_agent_team) - Automated investment analysis.
-*   [🏗️ AI System Architect](advanced_ai_agents/single_agent_apps/ai_system_architect_r1/) - Design robust software architectures.
+*   [🏗️ AI System Architect](advanced_ai_agents/single_ai_agents/ai_system_architect_r1/) - Design robust software architectures.
 *   [💰 AI Financial Coach](advanced_ai_agents/multi_agent_apps/ai_financial_coach_agent/) - Personalized wealth management.
-*   [📡 Earnings Analyst Agent](advanced_ai_agents/single_agent_apps/earnings_call_analyst_agent/) - Live market news grounding.
+*   [📡 Earnings Analyst Agent](advanced_ai_agents/single_ai_agents/earnings_call_analyst_agent/) - Live market news grounding.
 *   [🧬 AI Self-Evolving Agent](advanced_ai_agents/multi_agent_apps/ai_self_evolving_agent/) - Agents that improve their own code.
 *   [🛡️ Trust-Gated Research Team](advanced_ai_agents/multi_agent_apps/trust_gated_agent_team/) - Human-in-the-loop multi-agent safety.
 
@@ -174,7 +170,7 @@ streamlit run travel_agent.py
 *Low-latency speech-to-speech agents for immersive experiences.*
 
 *   [🗣️ AI Audio Tour Agent](voice_ai_agents/ai_audio_tour_agent/) - Location-aware audio guides.
-*   [📞 Customer Support Voice Agent](voice_ai_agents/customer_support_voice_agent/) - Automated voice helpdesk.
+*   [📞 Customer Support Voice Agent](voice_ai_agents/customer_support_voice_ai_agent/) - Automated voice helpdesk.
 *   [🛡️ Insurance Claim Live Team](voice_ai_agents/insurance_claim_live_agent_team/) - High-stakes voice intake.
 *   [🔊 Voice RAG Agent](voice_ai_agents/voice_rag_openaisdk/) - Speak to your documents.
 
@@ -229,8 +225,8 @@ streamlit run travel_agent.py
 
 *   [💬 Chat with GitHub](advanced_llm_apps/chat_with_X_tutorials/chat_with_github/)
 *   [📨 Chat with Gmail](advanced_llm_apps/chat_with_X_tutorials/chat_with_gmail/)
-*   [📄 Chat with PDF](advanced_llm_apps/chat_with_X_tutorials/chat_with_pdf/)
-*   [📽️ Chat with YouTube](advanced_llm_apps/chat_with_X_tutorials/chat_with_youtube_videos/)
+*   [📄 Chat with PDF](advanced_llm_apps/chat_with_X_tutorials/chat_with_pdf_ai_agent/)
+*   [📽️ Chat with YouTube](advanced_llm_apps/chat_with_X_tutorials/chat_with_youtube_videos_ai_agent/)
 
 ### 🎯 LLM Optimization & 🔧 Fine-tuning
 *Efficiency and customization for large-scale deployments.*
@@ -258,9 +254,15 @@ streamlit run travel_agent.py
 
 ## 📜 License & Credits
 
-Released under the [Apache-2.0 License](LICENSE). 
+Released under the [MIT License](LICENSE). 
 
 **Inspiration and related collections:**
 - [Kaushikb11/Awesome-AI-Agents](https://github.com/kaushikb11/awesome-llm-agents)
 - [Kyrolabs/Awesome-Agents](https://github.com/kyrolabs/awesome-agents)
 - [Jenqyang/Awesome-AI-Agents](https://github.com/Jenqyang/Awesome-AI-Agents)
+I-Agents](https://github.com/Jenqyang/Awesome-AI-Agents)
+esome-AI-Agents)
+e-AI-Agents)
+I-Agents](https://github.com/Jenqyang/Awesome-AI-Agents)
+esome-AI-Agents)
+nts)
