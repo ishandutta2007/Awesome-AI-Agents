@@ -238,8 +238,8 @@ def retrieve(state):
     return {"keys": {"documents": documents, "question": question}}
 
 
-def generate(state):
-    """Generate answer using Claude 3 model"""
+def generate_answer_with_ai_agent(state):
+    """Generate answer using AI Agent with Claude model"""
     print("~-generate-~")
     state_dict = state["keys"]
     question, documents = state_dict["question"], state_dict["documents"]
@@ -248,19 +248,19 @@ def generate(state):
             Context: {context}
             Question: {question}
             Answer:""", input_variables=["context", "question"])
-        llm = ChatAnthropic(model="claude-sonnet-4-5", api_key=st.session_state.anthropic_api_key,
+        llm = ChatAnthropic(model="claude-3-5-sonnet-20241022", api_key=st.session_state.anthropic_api_key,
                            temperature=0, max_tokens=1000)
         context = "\n\n".join(doc.page_content for doc in documents)
 
-        # Create and run chain
-        rag_chain = (
+        # Create and run AI Agent chain
+        ai_agent_rag_chain = (
             {"context": lambda x: context, "question": lambda x: question} 
             | prompt 
             | llm 
             | StrOutputParser()
         )
 
-        generation = rag_chain.invoke({})
+        generation = ai_agent_rag_chain.invoke({})
 
         return {
             "keys": {
@@ -271,23 +271,23 @@ def generate(state):
         }
 
     except Exception as e:
-        error_msg = f"Error in generate function: {str(e)}"
+        error_msg = f"Error in AI Agent generate function: {str(e)}"
         print(error_msg)
         st.error(error_msg)
         return {"keys": {"documents": documents, "question": question, 
-                "generation": "Sorry, I encountered an error while generating the response."}}
+                "generation": "Sorry, I encountered an error while the AI Agent was generating the response."}}
 
-def grade_documents(state):
-    """Determines whether the retrieved documents are relevant."""
+def grade_documents_with_ai_agent(state):
+    """Determines whether the retrieved documents are relevant using a Grader AI Agent."""
     print("~-check relevance-~")
     state_dict = state["keys"]
     question = state_dict["question"]
     documents = state_dict["documents"]
 
-    llm = ChatAnthropic(model="claude-sonnet-4-5", api_key=st.session_state.anthropic_api_key,
+    llm = ChatAnthropic(model="claude-3-5-sonnet-20241022", api_key=st.session_state.anthropic_api_key,
                        temperature=0, max_tokens=1000)
 
-    prompt = PromptTemplate(template="""You are grading the relevance of a retrieved document to a user question.
+    prompt = PromptTemplate(template="""You are an expert Grader AI Agent. Your task is to grade the relevance of a retrieved document to a user question.
         Return ONLY a JSON object with a "score" field that is either "yes" or "no".
         Do not include any other text or explanation.
         
@@ -300,7 +300,7 @@ def grade_documents(state):
         - Return exactly like this example: {{"score": "yes"}} or {{"score": "no"}}""",
         input_variables=["context", "question"])
 
-    chain = (
+    grader_ai_agent_chain = (
         prompt 
         | llm 
         | StrOutputParser()
@@ -311,7 +311,7 @@ def grade_documents(state):
     
     for d in documents:
         try:
-            response = chain.invoke({"question": question, "context": d.page_content})
+            response = grader_ai_agent_chain.invoke({"question": question, "context": d.page_content})
             import re
             json_match = re.search(r'\{.*\}', response)
             if json_match:
@@ -328,7 +328,7 @@ def grade_documents(state):
                 search = "Yes"
                 
         except Exception as e:
-            print(f"Error grading document: {str(e)}")
+            print(f"Error in Grader AI Agent: {str(e)}")
             # On error, keep the document to be safe
             filtered_docs.append(d)
             continue
@@ -336,8 +336,8 @@ def grade_documents(state):
     return {"keys": {"documents": filtered_docs, "question": question, "run_web_search": search}}
 
 
-def transform_query(state):
-    """Transform the query to produce a better question."""
+def transform_query_with_ai_agent(state):
+    """Transform the query using a Query Transformer AI Agent."""
     print("~-transform query-~")
     state_dict = state["keys"]
     question = state_dict["question"]
@@ -345,7 +345,7 @@ def transform_query(state):
 
     # Create a prompt template
     prompt = PromptTemplate(
-        template="""Generate a search-optimized version of this question by 
+        template="""You are a Query Transformer AI Agent. Generate a search-optimized version of this question by 
         analyzing its core semantic meaning and intent.
         \n ------- \n
         {question}
@@ -354,17 +354,16 @@ def transform_query(state):
         input_variables=["question"],
     )
 
-    # Use Claude instead of Gemini
     llm = ChatAnthropic(
-        model="claude-sonnet-4-5",
+        model="claude-3-5-sonnet-20241022",
         anthropic_api_key=st.session_state.anthropic_api_key,
         temperature=0,
         max_tokens=1000
     )
 
-    # Prompt
-    chain = prompt | llm | StrOutputParser()
-    better_question = chain.invoke({"question": question})
+    # Transformer Chain
+    transformer_ai_agent_chain = prompt | llm | StrOutputParser()
+    better_question = transformer_ai_agent_chain.invoke({"question": question})
 
     return {
         "keys": {"documents": documents, "question": better_question}
@@ -407,9 +406,9 @@ workflow = StateGraph(GraphState)
 
 # Define the nodes by langgraph
 workflow.add_node("retrieve", retrieve) 
-workflow.add_node("grade_documents", grade_documents)  
-workflow.add_node("generate", generate) 
-workflow.add_node("transform_query", transform_query)  
+workflow.add_node("grade_documents", grade_documents_with_ai_agent)  
+workflow.add_node("generate", generate_answer_with_ai_agent) 
+workflow.add_node("transform_query", transform_query_with_ai_agent)  
 workflow.add_node("web_search", web_search) 
 
 # Build graph

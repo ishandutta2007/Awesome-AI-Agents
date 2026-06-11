@@ -2,19 +2,19 @@ import streamlit as st
 import requests
 import fitz  # PyMuPDF for PDF parsing
 
-st.set_page_config(page_title="📄 Resume & Job Matcher", layout="centered")
+st.set_page_config(page_title="📄 Resume & Job Matcher AI Agent", layout="centered")
 
-st.title("📄 Resume & Job Matcher")
+st.title("📄 Resume & Job Matcher AI Agent")
 
 st.sidebar.info("""
-This app uses a local LLM via **Ollama**.
+This app uses a specialized **Resume & Job Matcher AI Agent** powered by a local LLM via **Ollama**.
 1. Install Ollama: https://ollama.ai
 2. Verify the ollama CLI works, by running the below commands in your terminal:
     2.1. Start the Ollama server: `ollama serve` on separate terminal.
     2.2. Run a model (e.g., `ollama pull llama3`).
     2.3. Verify local LLM llama is listed using `ollama list`.
-    2.4. Run the streamlit run app.py command to start this app in another terminal.
-3. Upload a Resume + Job Description to get a fit score and suggestions.
+    2.4. Run the streamlit run app.py command to start this AI Agent in another terminal.
+3. Upload a Resume + Job Description to get a fit score and suggestions from the AI Agent.
 """)
 
 # Helper: Extract text from PDF
@@ -44,25 +44,25 @@ if st.button("🔍 Match Resume with Job Description"):
         job_text = get_text_from_file(job_file)
     
 
-        # Prompt
+        # Prompt for the AI Agent
         prompt = f"""
-        You are an AI career assistant.
+        You are a specialized Resume & Job Matcher AI Agent with expertise in technical recruitment.
         
-        Resume:
+        Resume Content:
         {resume_text}
 
         Job Description:
         {job_text}
 
-        Please analyze and return:
+        As an AI Agent, please analyze and return:
         1. A **Fit Score** (0-100%) of how well this resume matches the job.
         2. Key strengths (resume areas that align well).
-        3. Specific recommendations to improve the resume to better fit the job.
+        3. Specific recommendations from an AI Agent perspective to improve the resume to better fit the job.
         Format neatly in Markdown.
         """
 
         try:
-            with st.spinner("⏳ Analyzing Resume vs Job Description..."):
+            with st.spinner("⏳ AI Agent is analyzing Resume vs Job Description..."):
                 response = requests.post(
                     "http://localhost:11434/api/generate",
                     json={"model": "llama3", "prompt": prompt, "stream": False},
