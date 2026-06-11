@@ -1,5 +1,9 @@
 
 <p align="center">
+  <img src="docs/banner/banner.svg" alt="Awesome AI Agents Banner" width="800">
+</p>
+
+<p align="center">
   <a href="https://www.linkedin.com/in/ishandutta2007/">
     <img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
@@ -93,8 +97,8 @@ streamlit run travel_agent.py
 |:---|:---|:---|
 | [📡 Earnings Analyst](advanced_ai_agents/single_ai_agents/earnings_call_analyst_agent/) | YouTube-to-Insight cards with quote syncing | Gemini 1.5 + ADK |
 | [🛡️ Live Voice Claims](voice_ai_agents/insurance_claim_live_agent_team/) | Real-time voice intake for insurance | Gemini Live + Voice |
-| [🏠 Home AI Redesign](advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent) | Image-to-Architecture transformation | Vision + Multi-Agent |
-| [♾️ Skill Optimizer](awesome_agent_skills/self-improving-agent-skills/) | Self-evolving agent capabilities | ADK + Gemini |
+| [🏠 Home AI Redesign](advanced_ai_agents/multi_ai_agent_systems/ai_home_renovation_agent) | Image-to-Architecture transformation | Vision + Multi-Agent |
+| [♾️ Skill Optimizer](awesome_ai_agent_skills/self-improving-agent-skills/) | Self-evolving agent capabilities | ADK + Gemini |
 
 ---
 
@@ -142,31 +146,31 @@ streamlit run travel_agent.py
 ### 🚀 Advanced AI Agents
 *Production-ready agents featuring tools, long-term memory, and complex reasoning.*
 
-*   [🏚️ AI Home Renovation Agent](advanced_ai_agents/multi_agent_apps/ai_home_renovation_agent) - Visual redesign with Nano Banana Pro.
-*   [🧠 DevPulse AI](advanced_ai_agents/multi_agent_apps/devpulse_ai/) - Multi-agent signal intelligence for developers.
+*   [🏚️ AI Home Renovation Agent](advanced_ai_agents/multi_ai_agent_systems/ai_home_renovation_agent) - Visual redesign with Nano Banana Pro.
+*   [🧠 DevPulse AI](advanced_ai_agents/multi_ai_agent_systems/devpulse_ai/) - Multi-agent signal intelligence for developers.
 *   [🔍 AI Deep Research Agent](advanced_ai_agents/single_ai_agents/ai_deep_research_agent/) - Systematic deep-dive researcher.
-*   [📊 AI VC Due Diligence Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_vc_due_diligence_agent_team) - Automated investment analysis.
+*   [📊 AI VC Due Diligence Team](advanced_ai_agents/multi_ai_agent_systems/agent_teams/ai_vc_due_diligence_agent_team) - Automated investment analysis.
 *   [🏗️ AI System Architect](advanced_ai_agents/single_ai_agents/ai_system_architect_r1/) - Design robust software architectures.
-*   [💰 AI Financial Coach](advanced_ai_agents/multi_agent_apps/ai_financial_coach_agent/) - Personalized wealth management.
+*   [💰 AI Financial Coach](advanced_ai_agents/multi_ai_agent_systems/ai_financial_coach_agent/) - Personalized wealth management.
 *   [📡 Earnings Analyst Agent](advanced_ai_agents/single_ai_agents/earnings_call_analyst_agent/) - Live market news grounding.
-*   [🧬 AI Self-Evolving Agent](advanced_ai_agents/multi_agent_apps/ai_self_evolving_agent/) - Agents that improve their own code.
-*   [🛡️ Trust-Gated Research Team](advanced_ai_agents/multi_agent_apps/trust_gated_agent_team/) - Human-in-the-loop multi-agent safety.
+*   [🧬 AI Self-Evolving Agent](advanced_ai_agents/multi_ai_agent_systems/ai_self_evolving_agent/) - Agents that improve their own code.
+*   [🛡️ Trust-Gated Research Team](advanced_ai_agents/multi_ai_agent_systems/trust_gated_agent_team/) - Human-in-the-loop multi-agent safety.
 
 ### 🎮 Autonomous Game-Playing Agents
 *Agents that master game mechanics through reasoning and strategy.*
 
-*   [🎮 AI 3D Pygame Agent](advanced_ai_agents/autonomous_game_playing_agent_apps/ai_3dpygame_r1/) - Real-time 3D navigation.
-*   [♜ AI Chess Agent](advanced_ai_agents/autonomous_game_playing_agent_apps/ai_chess_agent/) - Strategic engine-based gameplay.
-*   [🎲 AI Tic-Tac-Toe Agent](advanced_ai_agents/autonomous_game_playing_agent_apps/ai_tic_tac_toe_agent/) - Logic-driven reinforcement learning.
+*   [🎮 AI 3D Pygame Agent](advanced_ai_agents/autonomous_game_playing_ai_agents/ai_3dpygame_r1/) - Real-time 3D navigation.
+*   [♜ AI Chess Agent](advanced_ai_agents/autonomous_game_playing_ai_agents/ai_chess_agent/) - Strategic engine-based gameplay.
+*   [🎲 AI Tic-Tac-Toe Agent](advanced_ai_agents/autonomous_game_playing_ai_agents/ai_tic_tac_toe_agent/) - Logic-driven reinforcement learning.
 
 ### 🤝 Multi-agent Teams
 *Collaborative ecosystems where specialized agents work together.*
 
-*   [🧲 Competitor Intelligence Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_competitor_intelligence_agent_team/) - Track market shifts.
-*   [👨‍⚖️ AI Legal Agent Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_legal_agent_team/) - Document review and compliance.
-*   [💻 Multimodal Coding Team](advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_coding_agent_team/) - Collaborative software engineering.
-*   [🏠 AI Real Estate Team](advanced_ai_agents/multi_agent_apps/agent_teams/ai_real_estate_agent_team) - Market analysis and property matching.
-*   [✨ Multimodal Design Team](advanced_ai_agents/multi_agent_apps/agent_teams/multimodal_design_agent_team/) - UI/UX and visual asset creation.
+*   [🧲 Competitor Intelligence Team](advanced_ai_agents/multi_ai_agent_systems/agent_teams/ai_competitor_intelligence_agent_team/) - Track market shifts.
+*   [👨‍⚖️ AI Legal Agent Team](advanced_ai_agents/multi_ai_agent_systems/agent_teams/ai_legal_agent_team/) - Document review and compliance.
+*   [💻 Multimodal Coding Team](advanced_ai_agents/multi_ai_agent_systems/agent_teams/multimodal_coding_agent_team/) - Collaborative software engineering.
+*   [🏠 AI Real Estate Team](advanced_ai_agents/multi_ai_agent_systems/agent_teams/ai_real_estate_agent_team) - Market analysis and property matching.
+*   [✨ Multimodal Design Team](advanced_ai_agents/multi_ai_agent_systems/agent_teams/multimodal_design_agent_team/) - UI/UX and visual asset creation.
 
 ### 🗣️ Voice AI Agents
 *Low-latency speech-to-speech agents for immersive experiences.*
@@ -187,56 +191,56 @@ streamlit run travel_agent.py
 ### 📀 RAG (Retrieval-Augmented Generation)
 *Advanced retrieval techniques for grounding LLMs in private data.*
 
-*   [🔥 Agentic RAG (Gemma)](rag_tutorials/agentic_rag_embedding_gemma) - Self-correcting retrieval.
-*   [🧐 Reasoning RAG](rag_tutorials/agentic_rag_with_reasoning/) - Chain-of-thought retrieval.
-*   [🔄 Corrective RAG (CRAG)](rag_tutorials/corrective_rag/) - Fallback mechanisms for accuracy.
-*   [🐋 Deepseek Local RAG](rag_tutorials/deepseek_local_rag_agent/) - Privacy-first offline retrieval.
-*   [🕸️ Knowledge Graph RAG](rag_tutorials/knowledge_graph_rag_citations/) - Structured relationship retrieval.
-*   [🩺 RAG Diagnostics Clinic](rag_tutorials/rag_failure_diagnostics_clinic/) - Troubleshooting retrieval failures.
+*   [🔥 Agentic RAG (Gemma)](rag_ai_agent_tutorials/agentic_rag_embedding_gemma) - Self-correcting retrieval.
+*   [🧐 Reasoning RAG](rag_ai_agent_tutorials/agentic_rag_with_reasoning/) - Chain-of-thought retrieval.
+*   [🔄 Corrective RAG (CRAG)](rag_ai_agent_tutorials/corrective_rag/) - Fallback mechanisms for accuracy.
+*   [🐋 Deepseek Local RAG](rag_ai_agent_tutorials/deepseek_local_rag_agent/) - Privacy-first offline retrieval.
+*   [🕸️ Knowledge Graph RAG](rag_ai_agent_tutorials/knowledge_graph_rag_citations/) - Structured relationship retrieval.
+*   [🩺 RAG Diagnostics Clinic](rag_ai_agent_tutorials/rag_failure_diagnostics_clinic/) - Troubleshooting retrieval failures.
 
 ### 🧩 Awesome Agent Skills
 *Plug-and-play skill files for any agent framework.*
 
-*   [♾️ Self-Improving Skills](awesome_agent_skills/self-improving-agent-skills/) - Auto-optimization with ADK.
+*   [♾️ Self-Improving Skills](awesome_ai_agent_skills/self-improving-agent-skills/) - Auto-optimization with ADK.
 
 <details>
 <summary><strong>📋 View all 19 specialized skills</strong></summary>
 
 | Skill | Category |
 |---|---|
-| [🎓 Academic Researcher](awesome_agent_skills/academic-researcher/) | Science & Research |
-| [🔍 Code Reviewer](awesome_agent_skills/code-reviewer/) | Software Dev |
-| [✍️ Content Creator](awesome_agent_skills/content-creator/) | Marketing |
-| [📊 Data Analyst](awesome_agent_skills/data-analyst/) | Analytics |
-| [🐛 Debugger](awesome_agent_skills/debugger/) | Troubleshooting |
-| [🔬 Deep Research](awesome_agent_skills/deep-research/) | Strategy |
-| [💻 Fullstack Dev](awesome_agent_skills/fullstack-developer/) | Engineering |
-| [🎨 UX Designer](awesome_agent_skills/ux-designer/) | Design |
+| [🎓 Academic Researcher](awesome_ai_agent_skills/academic-researcher/) | Science & Research |
+| [🔍 Code Reviewer](awesome_ai_agent_skills/code-reviewer/) | Software Dev |
+| [✍️ Content Creator](awesome_ai_agent_skills/content-creator/) | Marketing |
+| [📊 Data Analyst](awesome_ai_agent_skills/data-analyst/) | Analytics |
+| [🐛 Debugger](awesome_ai_agent_skills/debugger/) | Troubleshooting |
+| [🔬 Deep Research](awesome_ai_agent_skills/deep-research/) | Strategy |
+| [💻 Fullstack Dev](awesome_ai_agent_skills/fullstack-developer/) | Engineering |
+| [🎨 UX Designer](awesome_ai_agent_skills/ux-designer/) | Design |
 
 </details>
 
 ### 💾 LLM Apps with Memory
 *Long-term state management for personalized AI experiences.*
 
-*   [💾 ArXiv Agent with Memory](advanced_llm_apps/llm_apps_with_memory_tutorials/ai_arxiv_agent_memory/)
-*   [📝 Personalized Memory App](advanced_llm_apps/llm_apps_with_memory_tutorials/llm_app_personalized_memory/)
-*   [🗄️ Local ChatGPT with Memory](advanced_llm_apps/llm_apps_with_memory_tutorials/local_chatgpt_with_memory/)
+*   [💾 ArXiv Agent with Memory](advanced_llm_ai_agent_apps/llm_apps_with_memory_tutorials/ai_arxiv_agent_memory/)
+*   [📝 Personalized Memory App](advanced_llm_ai_agent_apps/llm_apps_with_memory_tutorials/llm_app_personalized_memory/)
+*   [🗄️ Local ChatGPT with Memory](advanced_llm_ai_agent_apps/llm_apps_with_memory_tutorials/local_chatgpt_with_memory/)
 
 ### 💬 Chat with Anything
 *Turn static data into dynamic conversations.*
 
-*   [💬 Chat with GitHub](advanced_llm_apps/chat_with_X_tutorials/chat_with_github/)
-*   [📨 Chat with Gmail](advanced_llm_apps/chat_with_X_tutorials/chat_with_gmail/)
-*   [📄 Chat with PDF](advanced_llm_apps/chat_with_X_tutorials/chat_with_pdf_ai_agent/)
-*   [📽️ Chat with YouTube](advanced_llm_apps/chat_with_X_tutorials/chat_with_youtube_videos_ai_agent/)
+*   [💬 Chat with GitHub](advanced_llm_ai_agent_apps/chat_with_X_tutorials/chat_with_github/)
+*   [📨 Chat with Gmail](advanced_llm_ai_agent_apps/chat_with_X_tutorials/chat_with_gmail/)
+*   [📄 Chat with PDF](advanced_llm_ai_agent_apps/chat_with_X_tutorials/chat_with_pdf_ai_agent/)
+*   [📽️ Chat with YouTube](advanced_llm_ai_agent_apps/chat_with_X_tutorials/chat_with_youtube_videos_ai_agent/)
 
 ### 🎯 LLM Optimization & 🔧 Fine-tuning
 *Efficiency and customization for large-scale deployments.*
 
-*   [🎯 Toonify Token Optimization](advanced_llm_apps/llm_optimization_tools/toonify_token_optimization/) - 30-60% cost reduction.
-*   [🧠 Headroom Context Optimization](advanced_llm_apps/llm_optimization_tools/headroom_context_optimization/) - 50-90% cost reduction.
-*   [🔧 Gemma 3 Fine-tuning](advanced_llm_apps/llm_finetuning_tutorials/gemma3_finetuning/) - Custom model recipes.
-*   [🔧 Llama 3.2 Fine-tuning](advanced_llm_apps/llm_finetuning_tutorials/llama3.2_finetuning/) - Low-rank adaptation (LoRA).
+*   [🎯 Toonify Token Optimization](advanced_llm_ai_agent_apps/llm_optimization_tools/toonify_token_optimization/) - 30-60% cost reduction.
+*   [🧠 Headroom Context Optimization](advanced_llm_ai_agent_apps/llm_optimization_tools/headroom_context_optimization/) - 50-90% cost reduction.
+*   [🔧 Gemma 3 Fine-tuning](advanced_llm_ai_agent_apps/llm_finetuning_tutorials/gemma3_finetuning/) - Custom model recipes.
+*   [🔧 Llama 3.2 Fine-tuning](advanced_llm_ai_agent_apps/llm_finetuning_tutorials/llama3.2_finetuning/) - Low-rank adaptation (LoRA).
 
 ---
 
