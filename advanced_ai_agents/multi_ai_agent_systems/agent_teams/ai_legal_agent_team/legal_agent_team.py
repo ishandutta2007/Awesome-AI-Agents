@@ -164,15 +164,16 @@ def main():
                                 # Add the file to processed files
                                 st.session_state.processed_files.add(uploaded_file.name)
                                 
-                                # Initialize agents
-                                legal_researcher = Agent(
-                                    name="Legal Researcher",
+                                # Initialize AI Agents
+                                legal_researcher_ai_agent = Agent(
+                                    name="Legal Researcher AI Agent",
                                     role="Legal research specialist",
-                                    model=OpenAIChat(id="gpt-5"),
+                                    model=OpenAIChat(id="gpt-4o"),
                                     tools=[DuckDuckGoTools()],
                                     knowledge=st.session_state.knowledge_base,
                                     search_knowledge=True,
                                     instructions=[
+                                        "You are a professional Legal Researcher AI Agent.",
                                         "Find and cite relevant legal cases and precedents",
                                         "Provide detailed research summaries with sources",
                                         "Reference specific sections from the uploaded document",
@@ -182,13 +183,14 @@ def main():
                                     markdown=True
                                 )
 
-                                contract_analyst = Agent(
-                                    name="Contract Analyst",
+                                contract_analyst_ai_agent = Agent(
+                                    name="Contract Analyst AI Agent",
                                     role="Contract analysis specialist",
-                                    model=OpenAIChat(id="gpt-5"),
+                                    model=OpenAIChat(id="gpt-4o"),
                                     knowledge=st.session_state.knowledge_base,
                                     search_knowledge=True,
                                     instructions=[
+                                        "You are a professional Contract Analyst AI Agent.",
                                         "Review contracts thoroughly",
                                         "Identify key terms and potential issues",
                                         "Reference specific clauses from the document"
@@ -196,13 +198,14 @@ def main():
                                     markdown=True
                                 )
 
-                                legal_strategist = Agent(
-                                    name="Legal Strategist", 
+                                legal_strategist_ai_agent = Agent(
+                                    name="Legal Strategist AI Agent", 
                                     role="Legal strategy specialist",
-                                    model=OpenAIChat(id="gpt-5"),
+                                    model=OpenAIChat(id="gpt-4o"),
                                     knowledge=st.session_state.knowledge_base,
                                     search_knowledge=True,
                                     instructions=[
+                                        "You are a professional Legal Strategist AI Agent.",
                                         "Develop comprehensive legal strategies",
                                         "Provide actionable recommendations",
                                         "Consider both risks and opportunities"
@@ -210,15 +213,15 @@ def main():
                                     markdown=True
                                 )
 
-                                # Legal Agent Team
+                                # Legal AI Agent Team
                                 st.session_state.legal_team = Team(
-                                    name="Legal Team Lead",
-                                    model=OpenAIChat(id="gpt-5"),
-                                    members=[legal_researcher, contract_analyst, legal_strategist],
+                                    name="Legal AI Agent Team Lead",
+                                    model=OpenAIChat(id="gpt-4o"),
+                                    members=[legal_researcher_ai_agent, contract_analyst_ai_agent, legal_strategist_ai_agent],
                                     knowledge=st.session_state.knowledge_base,
                                     search_knowledge=True,
                                     instructions=[
-                                        "Coordinate analysis between team members",
+                                        "Coordinate analysis between Legal AI Agent team members",
                                         "Provide comprehensive responses",
                                         "Ensure all recommendations are properly sourced",
                                         "Reference specific parts of the uploaded document",

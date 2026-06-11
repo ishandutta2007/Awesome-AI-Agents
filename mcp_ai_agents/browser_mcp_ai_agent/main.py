@@ -9,11 +9,11 @@ from mcp_agent.workflows.llm.augmented_llm_openai import OpenAIAugmentedLLM
 from mcp_agent.workflows.llm.augmented_llm import RequestParams
 
 # Page config
-st.set_page_config(page_title="Browser MCP Agent", page_icon="🌐", layout="wide")
+st.set_page_config(page_title="Browser MCP AI Agent", page_icon="🌐", layout="wide")
 
 # Title and description
-st.markdown("<h1 class='main-header'>🌐 Browser MCP Agent</h1>", unsafe_allow_html=True)
-st.markdown("Interact with a powerful web browsing agent that can navigate and interact with websites")
+st.markdown("<h1 class='main-header'>🌐 Browser MCP AI Agent</h1>", unsafe_allow_html=True)
+st.markdown("Interact with a powerful Web Browsing AI Agent that can navigate and interact with websites using the Model Context Protocol (MCP)")
 
 # Setup sidebar with example commands
 with st.sidebar:
@@ -31,36 +31,36 @@ with st.sidebar:
     st.markdown("- Scroll down and summarize the github readme")
     
     st.markdown("---")
-    st.caption("Note: The agent uses Playwright to control a real browser.")
+    st.caption("Note: The AI Agent uses Playwright to control a real browser.")
 
 # Query input
-query = st.text_area("Your Command", 
-                   placeholder="Ask the agent to navigate to websites and interact with them")
+query = st.text_area("Your Command for the AI Agent", 
+                   placeholder="Ask the AI Agent to navigate to websites and interact with them")
 
 # Initialize app and agent
 if 'initialized' not in st.session_state:
     st.session_state.initialized = False
-    st.session_state.mcp_app = MCPApp(name="streamlit_mcp_agent")
+    st.session_state.mcp_app = MCPApp(name="streamlit_mcp_ai_agent")
     st.session_state.mcp_context = None
     st.session_state.mcp_agent_app = None
-    st.session_state.browser_agent = None
+    st.session_state.browser_mcp_ai_agent = None
     st.session_state.llm = None
     st.session_state.loop = asyncio.new_event_loop()
     asyncio.set_event_loop(st.session_state.loop)
     st.session_state.is_processing = False
 
 # Setup function that runs only once
-async def setup_agent():
+async def setup_mcp_ai_agent():
     if not st.session_state.initialized:
         try:
             # Create context manager and store it in session state
             st.session_state.mcp_context = st.session_state.mcp_app.run()
             st.session_state.mcp_agent_app = await st.session_state.mcp_context.__aenter__()
             
-            # Create and initialize agent
-            st.session_state.browser_agent = Agent(
-                name="browser",
-                instruction="""You are a helpful web browsing assistant that can interact with websites using playwright.
+            # Create and initialize AI Agent
+            st.session_state.browser_mcp_ai_agent = Agent(
+                name="browser_mcp_ai_agent",
+                instruction="""You are a professional Web Browsing AI Agent that can interact with websites using playwright.
                     - Navigate to websites and perform browser actions (click, scroll, type)
                     - Extract information from web pages 
                     - Take screenshots of page elements when useful
@@ -71,23 +71,23 @@ async def setup_agent():
                 server_names=["playwright"],
             )
             
-            # Initialize agent and attach LLM
-            await st.session_state.browser_agent.initialize()
-            st.session_state.llm = await st.session_state.browser_agent.attach_llm(OpenAIAugmentedLLM)
+            # Initialize AI Agent and attach LLM
+            await st.session_state.browser_mcp_ai_agent.initialize()
+            st.session_state.llm = await st.session_state.browser_mcp_ai_agent.attach_llm(OpenAIAugmentedLLM)
             
             # List tools once
             logger = st.session_state.mcp_agent_app.logger
-            tools = await st.session_state.browser_agent.list_tools()
-            logger.info("Tools available:", data=tools)
+            tools = await st.session_state.browser_mcp_ai_agent.list_tools()
+            logger.info("Tools available for AI Agent:", data=tools)
             
             # Mark as initialized
             st.session_state.initialized = True
         except Exception as e:
-            return f"Error during initialization: {str(e)}"
+            return f"Error during AI Agent initialization: {str(e)}"
     return None
 
-# Main function to run agent
-async def run_mcp_agent(message):
+# Main function to run AI Agent
+async def run_browser_mcp_ai_agent(message):
     # Credentials come from mcp_agent.secrets.yaml (api_key) and
     # mcp_agent.config.yaml (base_url, default_model). Both OpenAI and any
     # OpenAI-compatible server (e.g. Ollama at http://localhost:11434/v1)
@@ -96,18 +96,18 @@ async def run_mcp_agent(message):
         os.path.join(os.path.dirname(__file__), "mcp_agent.secrets.yaml")
     ):
         return (
-            "Error: no LLM credentials found. Either set OPENAI_API_KEY in "
+            "Error: no LLM credentials found for the AI Agent. Either set OPENAI_API_KEY in "
             "your environment, or create mcp_agent.secrets.yaml from the "
             "provided example (works for OpenAI and local Ollama)."
         )
 
     try:
-        # Make sure agent is initialized
-        error = await setup_agent()
+        # Make sure AI Agent is initialized
+        error = await setup_mcp_ai_agent()
         if error:
             return error
         
-        # Generate response without recreating agents
+        # Generate response without recreating AI Agents
         # Switch use_history to False to reduce the passed context
         result = await st.session_state.llm.generate_str(
             message=message, 
@@ -115,7 +115,7 @@ async def run_mcp_agent(message):
             )
         return result
     except Exception as e:
-        return f"Error: {str(e)}"
+        return f"Error in AI Agent: {str(e)}"
 
 # Defaults
 if 'is_processing' not in st.session_state:
@@ -137,8 +137,8 @@ st.button(
 
 # If we’re in a processing run, do the work now
 if st.session_state.is_processing:
-    with st.spinner("Processing your request..."):
-        result = st.session_state.loop.run_until_complete(run_mcp_agent(query))
+    with st.spinner("AI Agent is processing your request..."):
+        result = st.session_state.loop.run_until_complete(run_browser_mcp_ai_agent(query))
     # persist result across the next rerun
     st.session_state.last_result = result
     # unlock the button and refresh UI

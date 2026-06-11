@@ -183,8 +183,8 @@ streamlit run travel_agent.py
 ### ♾️ MCP AI Agents (Model Context Protocol)
 *Standardized tool-use for the next generation of AI applications.*
 
-*   [♾️ Browser MCP Agent](mcp_ai_agents/browser_mcp_agent/) - Web automation via MCP.
-*   [🐙 GitHub MCP Agent](mcp_ai_agents/github_mcp_agent/) - Repo management and PR automation.
+*   [♾️ Browser MCP Agent](mcp_ai_agents/browser_mcp_ai_agent/) - Web automation via MCP.
+*   [🐙 GitHub MCP Agent](mcp_ai_agents/github_mcp_ai_agent/) - Repo management and PR automation.
 *   [📑 Notion MCP Agent](mcp_ai_agents/notion_mcp_agent) - Knowledge base management.
 *   [🔀 Multi-MCP Agent Router](mcp_ai_agents/multi_mcp_ai_agent_router/) - Orchestrate multiple MCP servers.
 

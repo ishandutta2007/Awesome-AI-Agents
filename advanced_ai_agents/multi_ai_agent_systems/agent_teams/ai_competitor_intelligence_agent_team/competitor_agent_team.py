@@ -74,40 +74,44 @@ if "openai_api_key" in st.session_state and "firecrawl_api_key" in st.session_st
             limit=5
         )
 
-        # Create ExaTools agent for finding competitor URLs
+        # Create ExaTools AI Agent for finding competitor URLs
         if search_engine == "Exa AI":
             exa_tools = ExaTools(
                 api_key=st.session_state.exa_api_key,
                 category="company",
                 num_results=3
             )
-            competitor_finder_agent = Agent(
+            competitor_finder_ai_agent = Agent(
+                name="Competitor Finder AI Agent",
                 model=OpenAIChat(id="gpt-4o", api_key=st.session_state.openai_api_key),
                 tools=[exa_tools],
                 debug_mode=True,
                 markdown=True,
                 instructions=[
-                    "You are a competitor finder agent. Use ExaTools to find competitor company URLs.",
+                    "You are a professional Competitor Finder AI Agent. Use ExaTools to find competitor company URLs.",
                     "When given a URL, find similar companies. When given a description, search for companies matching that description.",
                     "Return ONLY the URLs, one per line, with no additional text."
                 ]
             )
 
-        firecrawl_agent = Agent(
+        firecrawl_ai_agent = Agent(
+            name="Firecrawl AI Agent",
             model=OpenAIChat(id="gpt-4o", api_key=st.session_state.openai_api_key),
             tools=[firecrawl_tools, DuckDuckGoTools()],
             debug_mode=True,
             markdown=True
         )
 
-        analysis_agent = Agent(
+        analysis_ai_agent = Agent(
+            name="Market Analysis AI Agent",
             model=OpenAIChat(id="gpt-4o", api_key=st.session_state.openai_api_key),
             debug_mode=True,
             markdown=True
         )
 
-        # New agent for comparing competitor data
-        comparison_agent = Agent(
+        # New AI Agent for comparing competitor data
+        comparison_ai_agent = Agent(
+            name="Comparison AI Agent",
             model=OpenAIChat(id="gpt-4o", api_key=st.session_state.openai_api_key),
             debug_mode=True,
             markdown=True
@@ -161,13 +165,13 @@ if "openai_api_key" in st.session_state and "firecrawl_api_key" in st.session_st
 
             else:  # Exa AI
                 try:
-                    # Use ExaTools agent to find competitor URLs
+                    # Use ExaTools AI Agent to find competitor URLs
                     if url:
                         prompt = f"Find 3 competitor company URLs similar to: {url}. Return ONLY the URLs, one per line."
                     else:
                         prompt = f"Find 3 competitor company URLs matching this description: {description}. Return ONLY the URLs, one per line."
                     
-                    response: RunOutput = competitor_finder_agent.run(prompt)
+                    response: RunOutput = competitor_finder_ai_agent.run(prompt)
                     # Extract URLs from the response
                     urls = [line.strip() for line in response.content.strip().split('\n') if line.strip() and line.strip().startswith('http')]
                     return urls[:3]  # Return up to 3 URLs
@@ -273,7 +277,7 @@ if "openai_api_key" in st.session_state and "firecrawl_api_key" in st.session_st
             formatted_data = json.dumps(competitor_data, indent=2)
             print("Analysis Data:", formatted_data)  # For debugging
             
-            report: RunOutput = analysis_agent.run(
+            report: RunOutput = analysis_ai_agent.run(
                 f"""Analyze the following competitor data in JSON format and identify market opportunities to improve my own company:
                 
                 {formatted_data}
