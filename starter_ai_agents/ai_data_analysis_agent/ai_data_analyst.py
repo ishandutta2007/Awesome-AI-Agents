@@ -82,11 +82,12 @@ if uploaded_file is not None and "openai_key" in st.session_state:
             table="uploaded_data",
         )
         
-        # Initialize the Agent with DuckDB and Pandas tools
-        data_analyst_agent = Agent(
+        # Initialize the Data Analyst AI Agent with DuckDB and Pandas tools
+        data_analyst_ai_agent = Agent(
+            name="Data Analyst AI Agent",
             model=OpenAIChat(id="gpt-4o", api_key=st.session_state.openai_key),
             tools=[duckdb_tools, PandasTools()],
-            system_message="You are an expert data analyst. Use the 'uploaded_data' table to answer user queries. Generate SQL queries using DuckDB tools to solve the user's query. Provide clear and concise answers with the results.",
+            system_message="You are an expert Data Analyst AI Agent. Use the 'uploaded_data' table to answer user queries. Generate SQL queries using DuckDB tools to solve the user's query. Provide clear and concise answers with the results.",
             markdown=True,
         )
         
@@ -98,7 +99,7 @@ if uploaded_file is not None and "openai_key" in st.session_state:
         user_query = st.text_area("Ask a query about the data:")
         
         # Add info message about terminal output
-        st.info("💡 Check your terminal for a clearer output of the agent's response")
+        st.info("💡 Check your terminal for a clearer output of the AI Agent's response")
         
         if st.button("Submit Query"):
             if user_query.strip() == "":
@@ -106,18 +107,18 @@ if uploaded_file is not None and "openai_key" in st.session_state:
             else:
                 try:
                     # Show loading spinner while processing
-                    with st.spinner('Processing your query...'):
-                        # Get the response from the agent
-                        response = data_analyst_agent.run(user_query)
+                    with st.spinner('AI Agent is processing your query...'):
+                        # Get the response from the AI Agent
+                        ai_agent_response = data_analyst_ai_agent.run(user_query)
 
                         # Extract the content from the response object
-                        if hasattr(response, 'content'):
-                            response_content = response.content
+                        if hasattr(ai_agent_response, 'content'):
+                            ai_agent_response_content = ai_agent_response.content
                         else:
-                            response_content = str(response)
+                            ai_agent_response_content = str(ai_agent_response)
 
                     # Display the response in Streamlit
-                    st.markdown(response_content)
+                    st.markdown(ai_agent_response_content)
                 
                     
                 except Exception as e:

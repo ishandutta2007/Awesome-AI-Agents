@@ -18,15 +18,15 @@ models_lab_api_key = st.sidebar.text_input("Enter your ModelsLab API Key", type=
 st.title("🎶 ModelsLab Music Generator")
 prompt = st.text_area("Enter a music generation prompt:", "Generate a 30 second classical music piece", height=100)
 
-# Initialize agent only if both API keys are provided
+# Initialize AI Agent only if both API keys are provided
 if openai_api_key and models_lab_api_key:
-    agent = Agent(
-        name="ModelsLab Music Agent",
+    music_generator_ai_agent = Agent(
+        name="Music Generator AI Agent",
         agent_id="ml_music_agent",
         model=OpenAIChat(id="gpt-4o", api_key=openai_api_key),
         show_tool_calls=True,
         tools=[ModelsLabTools(api_key=models_lab_api_key, wait_for_completion=True, file_type=FileType.MP3)],
-        description="You are an AI agent that can generate music using the ModelsLabs API.",
+        description="You are a specialized AI Agent that can generate music using the ModelsLabs API.",
         instructions=[
             "When generating music, use the `generate_media` tool with detailed prompts that specify:",
             "- The genre and style of music (e.g., classical, jazz, electronic)",
@@ -44,15 +44,15 @@ if openai_api_key and models_lab_api_key:
         if prompt.strip() == "":
             st.warning("Please enter a prompt first.")
         else:
-            with st.spinner("Generating music... 🎵"):
+            with st.spinner("Music Generator AI Agent is composing... 🎵"):
                 try:
-                    music: RunOutput = agent.run(prompt)
+                    ai_agent_response: RunOutput = music_generator_ai_agent.run(prompt)
 
-                    if music.audio and len(music.audio) > 0:
+                    if ai_agent_response.audio and len(ai_agent_response.audio) > 0:
                         save_dir = "audio_generations"
                         os.makedirs(save_dir, exist_ok=True)
 
-                        url = music.audio[0].url
+                        url = ai_agent_response.audio[0].url
                         response = requests.get(url)
 
                         # 🛡️ Validate response

@@ -31,20 +31,21 @@ if st.button("🎙️ Generate Podcast", disabled=not all([openai_key, elevenlab
                 os.environ["OPENAI_API_KEY"] = openai_key
                 os.environ["FIRECRAWL_API_KEY"] = firecrawl_key
                 
-                # Create agent for scraping and summarization
-                agent = Agent(
-                    name="Blog Summarizer",
+                # Initialize the Blog Summarizer AI Agent
+                blog_summarizer_ai_agent = Agent(
+                    name="Blog Summarizer AI Agent",
                     model=OpenAIChat(id="gpt-4o"),
                     tools=[FirecrawlTools()],
                     instructions=[
+                        "You are a professional Blog Summarizer AI Agent.",
                         "Scrape the blog URL and create a concise, engaging summary (max 2000 characters) suitable for a podcast.",
                         "The summary should be conversational and capture the main points."
                     ],
                 )
                 
-                # Get summary
-                response: RunOutput = agent.run(f"Scrape and summarize this blog for a podcast: {url}")
-                summary = response.content if hasattr(response, 'content') else str(response)
+                # Get the summary from the AI Agent
+                ai_agent_response: RunOutput = blog_summarizer_ai_agent.run(f"Scrape and summarize this blog for a podcast: {url}")
+                summary = ai_agent_response.content if hasattr(ai_agent_response, 'content') else str(ai_agent_response)
                 
                 if summary:
                     # Initialize ElevenLabs client and generate audio

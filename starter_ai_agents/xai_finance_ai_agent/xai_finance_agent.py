@@ -5,18 +5,18 @@ from agno.tools.yfinance import YFinanceTools
 from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.os import AgentOS
 
-# create the AI finance agent
-agent = Agent(
-    name="xAI Finance Agent",
-    model = xAI(id="grok-4-1-fast"),
+# Create the xAI Finance AI Agent
+xai_finance_ai_agent = Agent(
+    name="xAI Finance AI Agent",
+    model = xAI(id="grok-beta"),
     tools=[DuckDuckGoTools(), YFinanceTools()],
     instructions = ["Always use tables to display financial/numerical data. For text data use bullet points and small paragraphs."],
     debug_mode = True,
     markdown = True,
     )
 
-# UI for finance agent
-agent_os = AgentOS(agents=[agent])
+# UI for the AI Agent
+agent_os = AgentOS(agents=[xai_finance_ai_agent])
 app = agent_os.get_app()
 
 if __name__ == "__main__":

@@ -46,9 +46,9 @@ st.markdown("This OpenAI Agent from the OpenAI Agents SDK performs deep research
 # Research topic input
 research_topic = st.text_input("Enter your research topic:", placeholder="e.g., Latest developments in AI")
 
-# Keep the original deep_research tool
+# Custom tool for deep research
 @function_tool
-async def deep_research(query: str, max_depth: int, time_limit: int, max_urls: int) -> Dict[str, Any]:
+async def deep_research_tool(query: str, max_depth: int, time_limit: int, max_urls: int) -> Dict[str, Any]:
     """
     Perform comprehensive web research using Firecrawl's deep research endpoint.
     """
@@ -68,7 +68,7 @@ async def deep_research(query: str, max_depth: int, time_limit: int, max_urls: i
             st.write(f"[{activity['type']}] {activity['message']}")
         
         # Run deep research
-        with st.spinner("Performing deep research..."):
+        with st.spinner("AI Agent is performing deep research..."):
             results = firecrawl_app.deep_research(
                 query=query,
                 params=params,
@@ -85,13 +85,13 @@ async def deep_research(query: str, max_depth: int, time_limit: int, max_urls: i
         st.error(f"Deep research error: {str(e)}")
         return {"error": str(e), "success": False}
 
-# Keep the original agents
-research_agent = Agent(
-    name="research_agent",
-    instructions="""You are a research assistant that can perform deep web research on any topic.
+# Initialize AI Agents
+deep_research_ai_agent = Agent(
+    name="deep_research_ai_agent",
+    instructions="""You are a professional Deep Research AI Agent that can perform comprehensive web research on any topic.
 
     When given a research topic or question:
-    1. Use the deep_research tool to gather comprehensive information
+    1. Use the deep_research_tool to gather comprehensive information
        - Always use these parameters:
          * max_depth: 3 (for moderate depth)
          * time_limit: 180 (3 minutes)
@@ -101,12 +101,12 @@ research_agent = Agent(
     4. Include proper citations for all sources
     5. Highlight key findings and insights
     """,
-    tools=[deep_research]
+    tools=[deep_research_tool]
 )
 
-elaboration_agent = Agent(
-    name="elaboration_agent",
-    instructions="""You are an expert content enhancer specializing in research elaboration.
+content_elaboration_ai_agent = Agent(
+    name="content_elaboration_ai_agent",
+    instructions="""You are an expert Content Elaboration AI Agent specializing in research enhancement.
 
     When given a research report:
     1. Analyze the structure and content of the report
@@ -123,11 +123,11 @@ elaboration_agent = Agent(
     """
 )
 
-async def run_research_process(topic: str):
-    """Run the complete research process."""
+async def run_deep_research_workflow_with_ai_agents(topic: str):
+    """Run the complete research process using specialized AI Agents."""
     # Step 1: Initial Research
-    with st.spinner("Conducting initial research..."):
-        research_result = await Runner.run(research_agent, topic)
+    with st.spinner("Deep Research AI Agent is conducting initial research..."):
+        research_result = await Runner.run(deep_research_ai_agent, topic)
         initial_report = research_result.final_output
     
     # Display initial report in an expander
@@ -135,7 +135,7 @@ async def run_research_process(topic: str):
         st.markdown(initial_report)
     
     # Step 2: Enhance the report
-    with st.spinner("Enhancing the report with additional information..."):
+    with st.spinner("Content Elaboration AI Agent is enhancing the report..."):
         elaboration_input = f"""
         RESEARCH TOPIC: {topic}
         
@@ -146,7 +146,7 @@ async def run_research_process(topic: str):
         and deeper insights while maintaining its academic rigor and factual accuracy.
         """
         
-        elaboration_result = await Runner.run(elaboration_agent, elaboration_input)
+        elaboration_result = await Runner.run(content_elaboration_ai_agent, elaboration_input)
         enhanced_report = elaboration_result.final_output
     
     return enhanced_report
@@ -162,8 +162,8 @@ if st.button("Start Research", disabled=not (openai_api_key and firecrawl_api_ke
             # Create placeholder for the final report
             report_placeholder = st.empty()
             
-            # Run the research process
-            enhanced_report = asyncio.run(run_research_process(research_topic))
+            # Run the research process using AI Agents
+            enhanced_report = asyncio.run(run_deep_research_workflow_with_ai_agents(research_topic))
             
             # Display the enhanced report
             report_placeholder.markdown("## Enhanced Research Report")

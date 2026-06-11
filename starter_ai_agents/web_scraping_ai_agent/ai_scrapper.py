@@ -26,13 +26,15 @@ if openai_access_token:
     # Get the user prompt
     user_prompt = st.text_input("What you want the AI agent to scrae from the website?")
     
-    # Create a SmartScraperGraph object
-    smart_scraper_graph = SmartScraperGraph(
+    # Initialize the Web Scraping AI Agent using SmartScraperGraph
+    web_scraping_ai_agent = SmartScraperGraph(
         prompt=user_prompt,
         source=url,
         config=graph_config
     )
     # Scrape the website
-    if st.button("Scrape"):
-        result = smart_scraper_graph.run()
-        st.write(result)
+    if st.button("Scrape with AI Agent"):
+        with st.spinner("AI Agent is scraping the website..."):
+            ai_agent_result = web_scraping_ai_agent.run()
+            st.success("Scraping completed!")
+            st.write(ai_agent_result)

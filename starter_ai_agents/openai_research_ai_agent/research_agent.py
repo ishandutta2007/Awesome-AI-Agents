@@ -76,10 +76,10 @@ def save_important_fact(fact: str, source: str = None) -> str:
     
     return f"Fact saved: {fact}"
 
-# Define the agents
-research_agent = Agent(
-    name="Research Agent",
-    instructions="You are a research assistant. Given a search term, you search the web for that term and"
+# Define the AI Agents
+research_ai_agent = Agent(
+    name="Research AI Agent",
+    instructions="You are a professional research assistant AI Agent. Given a search term, you search the web for that term and"
     "produce a concise summary of the results. The summary must 2-3 paragraphs and less than 300"
     "words. Capture the main points. Write succintly, no need to have complete sentences or good"
     "grammar. This will be consumed by someone synthesizing a report, so its vital you capture the"
@@ -92,10 +92,10 @@ research_agent = Agent(
     ],
 )
 
-editor_agent = Agent(
-    name="Editor Agent",
-    handoff_description="A senior researcher who writes comprehensive research reports",
-    instructions="You are a senior researcher tasked with writing a cohesive report for a research query. "
+editor_ai_agent = Agent(
+    name="Editor AI Agent",
+    handoff_description="A senior research AI Agent who writes comprehensive research reports",
+    instructions="You are a senior research AI Agent tasked with writing a cohesive report for a research query. "
     "You will be provided with the original query, and some initial research done by a research "
     "assistant.\n"
     "You should first come up with an outline for the report that describes the structure and "
@@ -106,22 +106,22 @@ editor_agent = Agent(
     output_type=ResearchReport,
 )
 
-triage_agent = Agent(
-    name="Triage Agent",
-    instructions="""You are the coordinator of this research operation. Your job is to:
+triage_ai_agent = Agent(
+    name="Triage AI Agent",
+    instructions="""You are the coordinator AI Agent of this research operation. Your job is to:
     1. Understand the user's research topic
     2. Create a research plan with the following elements:
        - topic: A clear statement of the research topic
        - search_queries: A list of 3-5 specific search queries that will help gather information
        - focus_areas: A list of 3-5 key aspects of the topic to investigate
-    3. Hand off to the Research Agent to collect information
-    4. After research is complete, hand off to the Editor Agent who will write a comprehensive report
+    3. Hand off to the Research AI Agent to collect information
+    4. After research is complete, hand off to the Editor AI Agent who will write a comprehensive report
     
     Make sure to return your plan in the expected structured format with topic, search_queries, and focus_areas.
     """,
     handoffs=[
-        handoff(research_agent),
-        handoff(editor_agent)
+        handoff(research_ai_agent),
+        handoff(editor_ai_agent)
     ],
     model="gpt-4o-mini",
     output_type=ResearchPlan,
@@ -163,7 +163,7 @@ if "report_result" not in st.session_state:
     st.session_state.report_result = None
 
 # Main research function
-async def run_research(topic):
+async def run_research_workflow_with_ai_agents(topic):
     # Reset state for new research
     st.session_state.collected_facts = []
     st.session_state.research_done = False
@@ -177,12 +177,12 @@ async def run_research(topic):
         
     # Create a trace for the entire workflow
     with trace("News Research", group_id=st.session_state.conversation_id):
-        # Start with the triage agent
+        # Start with the triage AI Agent
         with message_container:
-            st.write("🔍 **Triage Agent**: Planning research approach...")
+            st.write("🔍 **Triage AI Agent**: Planning research approach...")
         
         triage_result = await Runner.run(
-            triage_agent,
+            triage_ai_agent,
             f"Research this topic thoroughly: {topic}. This research will be used to create a comprehensive research report."
         )
         
@@ -222,13 +222,13 @@ async def run_research(topic):
                 previous_fact_count = current_facts
             await asyncio.sleep(1)
         
-        # Editor Agent phase
+        # Editor AI Agent phase
         with message_container:
-            st.write("📝 **Editor Agent**: Creating comprehensive research report...")
+            st.write("📝 **Editor AI Agent**: Creating comprehensive research report...")
         
         try:
             report_result = await Runner.run(
-                editor_agent,
+                editor_ai_agent,
                 triage_result.to_input_list()
             )
             
@@ -249,7 +249,7 @@ async def run_research(topic):
                 
         except Exception as e:
             st.error(f"Error generating report: {str(e)}")
-            # Fallback to display raw agent response
+            # Fallback to display raw AI Agent response
             if hasattr(triage_result, 'new_items'):
                 messages = [item for item in triage_result.new_items if hasattr(item, 'content')]
                 if messages:
@@ -258,19 +258,19 @@ async def run_research(topic):
                     
                     with message_container:
                         st.write("⚠️ **Research completed but there was an issue generating the structured report.**")
-                        st.write("Raw research results are available in the Report tab.")
+                        st.write("Raw AI Agent research results are available in the Report tab.")
     
     st.session_state.research_done = True
 
 # Run the research when the button is clicked
 if start_button:
-    with st.spinner(f"Researching: {user_topic}"):
+    with st.spinner(f"AI Agent is researching: {user_topic}"):
         try:
-            asyncio.run(run_research(user_topic))
+            asyncio.run(run_research_workflow_with_ai_agents(user_topic))
         except Exception as e:
-            st.error(f"An error occurred during research: {str(e)}")
+            st.error(f"An error occurred during AI Agent research: {str(e)}")
             # Set a basic report result so the user gets something
-            st.session_state.report_result = f"# Research on {user_topic}\n\nUnfortunately, an error occurred during the research process. Please try again later or with a different topic.\n\nError details: {str(e)}"
+            st.session_state.report_result = f"# Research on {user_topic}\n\nUnfortunately, an error occurred during the AI Agent research process. Please try again later or with a different topic.\n\nError details: {str(e)}"
             st.session_state.research_done = True
 
 # Display results in the Report tab

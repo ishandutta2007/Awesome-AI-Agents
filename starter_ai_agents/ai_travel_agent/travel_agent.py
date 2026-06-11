@@ -73,8 +73,8 @@ openai_api_key = st.text_input("Enter OpenAI API Key to access GPT-4o", type="pa
 serp_api_key = st.text_input("Enter Serp API Key for Search functionality", type="password")
 
 if openai_api_key and serp_api_key:
-    researcher = Agent(
-        name="Researcher",
+    travel_researcher_ai_agent = Agent(
+        name="Travel Researcher AI Agent",
         role="Searches for travel destinations, activities, and accommodations based on user preferences",
         model=OpenAIChat(id="gpt-4o", api_key=openai_api_key),
         description=dedent(
@@ -93,8 +93,8 @@ if openai_api_key and serp_api_key:
         tools=[SerpApiTools(api_key=serp_api_key)],
         add_datetime_to_context=True,
     )
-    planner = Agent(
-        name="Planner",
+    travel_planner_ai_agent = Agent(
+        name="Travel Planner AI Agent",
         role="Generates a draft itinerary based on user preferences and research results",
         model=OpenAIChat(id="gpt-4o", api_key=openai_api_key),
         description=dedent(
@@ -124,7 +124,7 @@ if openai_api_key and serp_api_key:
         if st.button("Generate Itinerary"):
             with st.spinner("Researching your destination..."):
                 # First get research results
-                research_results: RunOutput = researcher.run(f"Research {destination} for a {num_days} day trip", stream=False)
+                research_results: RunOutput = travel_researcher_ai_agent.run(f"Research {destination} for a {num_days} day trip", stream=False)
 
                 # Show research progress
                 st.write(" Research completed")
@@ -138,10 +138,10 @@ if openai_api_key and serp_api_key:
                 
                 Please create a detailed itinerary based on this research.
                 """
-                response: RunOutput = planner.run(prompt, stream=False)
+                ai_agent_response: RunOutput = travel_planner_ai_agent.run(prompt, stream=False)
                 # Store the response in session state
-                st.session_state.itinerary = response.content
-                st.write(response.content)
+                st.session_state.itinerary = ai_agent_response.content
+                st.write(ai_agent_response.content)
     
     # Only show download button if there's an itinerary
     with col2:

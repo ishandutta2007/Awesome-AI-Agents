@@ -6,7 +6,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import HumanMessage
 import re
 
-async def generate_meme(query: str, model_choice: str, api_key: str) -> None:
+async def generate_meme_with_ai_agent(query: str, model_choice: str, api_key: str) -> None:
     # Initialize the appropriate LLM based on user selection
     if model_choice == "Claude":
         llm = ChatAnthropic(
@@ -28,7 +28,7 @@ async def generate_meme(query: str, model_choice: str, api_key: str) -> None:
         )
 
     task_description = (
-        "You are a meme generator expert. You are given a query and you need to generate a meme for it.\n"
+        "You are an expert Meme Generator AI Agent. You are given a query and you need to generate a meme for it.\n"
         "1. Go to https://imgflip.com/memetemplates \n"
         "2. Click on the Search bar in the middle and search for ONLY ONE MAIN ACTION VERB (like 'bully', 'laugh', 'cry') in this query: '{0}'\n"
         "3. Choose any meme template that metaphorically fits the meme topic: '{0}'\n"
@@ -40,7 +40,7 @@ async def generate_meme(query: str, model_choice: str, api_key: str) -> None:
         "8. Copy the image link and give it as the output\n"
     ).format(query)
 
-    agent = Agent(
+    meme_generator_browser_ai_agent = Agent(
         task=task_description,
         llm=llm,
         max_actions_per_step=5,
@@ -48,7 +48,7 @@ async def generate_meme(query: str, model_choice: str, api_key: str) -> None:
         use_vision=(model_choice != "Deepseek")
     )
 
-    history = await agent.run()
+    history = await meme_generator_browser_ai_agent.run()
     
     # Extract final result from agent history
     final_result = history.final_result()
@@ -110,7 +110,7 @@ def main():
 
         with st.spinner(f"🧠 {model_choice} is generating your meme..."):
             try:
-                meme_url = asyncio.run(generate_meme(query, model_choice, api_key))
+                meme_url = asyncio.run(generate_meme_with_ai_agent(query, model_choice, api_key))
                 
                 if meme_url:
                     st.success("✅ Meme Generated Successfully!")

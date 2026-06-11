@@ -43,9 +43,9 @@ class SearchResults(BaseModel):
     items: List[ReturnItem] = Field(..., description="A list of search result items")
 
 
-SEARCH_AGENT_DESCRIPTION = "You are a helpful assistant that can search the web for information."
-SEARCH_AGENT_INSTRUCTIONS = dedent("""
-    You are a helpful assistant that can search the web or any other sources for information.
+SEARCH_AI_AGENT_DESCRIPTION = "You are a professional Search AI Agent that can search the web for information."
+SEARCH_AI_AGENT_INSTRUCTIONS = dedent("""
+    You are a professional Search AI Agent that can search the web or any other sources for information.
     You should create topic for the search from the given query instead of blindly apply the query to the search tools.
     For a given topic, your job is to search the web or any other sources and return the top 5 to 10 sources about the topic.
     Keep the search sources of high quality and reputable, and sources should be relevant to the asked topic.
@@ -64,23 +64,24 @@ SEARCH_AGENT_INSTRUCTIONS = dedent("""
 
 def search_agent_run(agent: Agent, query: str) -> str:
     """
-    Search Agent which searches the web and other sources for relevant sources about the given topic or query.
+    Search AI Agent which searches the web and other sources for relevant sources about the given topic or query.
     Args:
         agent: The agent instance
         query: The search query
     Returns:
         A formatted string response with the search results (link and gist only)
     """
-    print("Search Agent Input:", query)
+    print("Search AI Agent Input:", query)
     session_id = agent.session_id
     from services.internal_session_service import SessionService
 
     session = SessionService.get_session(session_id)
     current_state = session["state"]
-    search_agent = Agent(
+    search_ai_agent = Agent(
+        name="Search AI Agent",
         model=OpenAIChat(id="gpt-4o-mini"),
-        instructions=SEARCH_AGENT_INSTRUCTIONS,
-        description=SEARCH_AGENT_DESCRIPTION,
+        instructions=SEARCH_AI_AGENT_INSTRUCTIONS,
+        description=SEARCH_AI_AGENT_DESCRIPTION,
         use_json_mode=True,
         response_model=SearchResults,
         tools=[
@@ -96,8 +97,8 @@ def search_agent_run(agent: Agent, query: str) -> str:
         ],
         session_id=session_id,
     )
-    response = search_agent.run(query, session_id=session_id)
-    response_dict = response.to_dict()
+    ai_agent_response = search_ai_agent.run(query, session_id=session_id)
+    response_dict = ai_agent_response.to_dict()
     current_state["stage"] = "search"
     current_state["search_results"] = response_dict["content"]["items"]
     SessionService.save_session(session_id, current_state)
